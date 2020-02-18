@@ -1,7 +1,23 @@
-<h1 class='m-3'>Task Title: <%= @task.title %></h1>
+<h1 class='m-3'><%= @task.title %></h1>
 
-<ul>
-    <li><%= @task.title %></li>
-    <li><%= @task.details %></li>
-    <li><%= @task.completed %></li>
-</ul>
+<div class="card">
+    <div class="card-body">
+    <%= @task.details %></li>
+    </div>
+</div>
+
+<div class="m-3">
+  <% if @task.completed == true %>
+    <%= image_tag('checked_box.png', height: '16', width: '20.8') %>
+    <p> This task is completed </p>
+  <% else %>
+     <%= image_tag('unchecked_box.png', size: '16') %>
+     <p> This task is not yet completed</p>
+    
+  <% end %>
+
+  <%= link_to 'Back to list', tasks_path %>
+</div>
+
+
+
