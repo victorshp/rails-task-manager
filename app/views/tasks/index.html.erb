@@ -8,7 +8,10 @@
       <% else %>
         <%= image_tag('checked_box.png', height: '16', width: '20.8') %>
       <% end %>
-      <%= link_to task.title, task_path(task.id) %>
+      <%= link_to task.title, task_path(task.id) %> 
+      <%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
     </li>
   <% end %>
 </ul>
@@ -16,6 +19,6 @@
 <div class="m-3">
 
   <hr>
-  
+
   <%= link_to '+ Create new task', new_task_path %>
 </div>
