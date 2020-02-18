@@ -1,0 +1,14 @@
+<h1 class='m-3'>My Tasks</h1>
+
+<ul style="list-style-type:none">
+  <% @tasks.each do |task| %>
+    <li>
+      <% if task.completed == false %>
+        <%= image_tag('unchecked_box.png', size: '16') %>
+      <% else %>
+        <%= image_tag('checked_box.png', height: '16', width: '20.8') %>
+      <% end %>
+      <%= link_to task.title, task_path(task.id) %>
+    </li>
+  <% end %>
+</ul>

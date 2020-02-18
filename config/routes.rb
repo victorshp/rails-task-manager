@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'tasks', to: 'tasks#index'
 
   # Read one task
-  get 'tasks/:id', to: 'tasks#show'
+  get 'tasks/:id', to: 'tasks#show', as: 'task'
 
   # Part 1/2 Create a task
   get 'tasks/new', to: 'tasks#new', as: 'new_task'
