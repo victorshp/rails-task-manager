@@ -13,7 +13,10 @@
     </div>
     
     <br>
-    <%= check_box 'task', 'completed', {}, true, false %> <p> Complete this task</p>
+    <div class='d-flex justify-content-left align-items-baseline'>
+      <%= check_box 'task', 'completed', {}, '1', '0' %> 
+      <p class='ml-2'> Complete this task</p>
+    </div>
     
     <%= f.submit class: 'btn btn-primary' %>
     
