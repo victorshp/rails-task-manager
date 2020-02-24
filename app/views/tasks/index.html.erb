@@ -4,7 +4,7 @@
   <% @tasks.each do |task| %>
     <li>
       <% if task.completed == false %>
-        <%= image_tag('unchecked_box.png', size: '16') %>
+        <%= image_tag('unchecked_box.png', size: '16') %><span class='ml-1'></span></%>
       <% else %>
         <%= image_tag('checked_box.png', height: '16', width: '20.8') %>
       <% end %>
